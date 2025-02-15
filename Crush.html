@@ -1,0 +1,69 @@
+Crush
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Question for You ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            color: white;
+            font-size: 2.5em;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #yes {
+            background-color: #ff4b5c;
+            color: white;
+            border-radius: 20px;
+        }
+        #no {
+            background-color: #f7c59f;
+            color: black;
+            border-radius: 20px;
+            position: absolute;
+        }
+        #yes:hover {
+            background-color: #ff2e63;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will you go on a date with me? ❤️</h1>
+    
+    <div class="buttons">
+        <button id="yes" onclick="alert('Yay! Can’t wait! ❤️')">Yes</button>
+        <button id="no" onmouseover="moveButton()">No</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            let x = Math.random() * window.innerWidth * 0.7;
+            let y = Math.random() * window.innerHeight * 0.7;
+            document.getElementById('no').style.left = `${x}px`;
+            document.getElementById('no').style.top = `${y}px`;
+        }
+    </script>
+
+</body>
+</html>
